@@ -30,11 +30,14 @@ export default function Podcasts() {
   function iconLinkGenerator(name, theme, link) {
     return (
       <a href={link} target="_blank" rel="noreferrer noopener">
-        <img
+        <Image
           src={`https://s2.svgbox.net/social.svg?ic=${name}&color=${
             theme === 'light' ? '000' : 'fff'
           }`}
           className="social-icons"
+          width={20}
+          height={20}
+          alt={name}
         />
       </a>
     )
@@ -68,7 +71,7 @@ export default function Podcasts() {
               />
             </div>
 
-            <div className="flex flex-row items-center my-4">
+            <div className="flex flex-row items-center my-4 space-x-4">
               <div className="pr-3 text-lg">Listen on</div>
               {podcastTwoLinks.map((link, index) =>
                 iconLinkGenerator(iconNames[index], theme, link),
@@ -85,7 +88,7 @@ export default function Podcasts() {
                 layout="responsive"
               />
             </div>
-            <div className="flex flex-row items-center my-4">
+            <div className="flex flex-row items-center my-4 space-x-4">
               <div className="pr-3 text-lg">Listen on</div>
               {podcastOneLinks.map((link, index) =>
                 iconLinkGenerator(iconNames[index], theme, link),

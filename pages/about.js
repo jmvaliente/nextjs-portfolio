@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Layout from '@/components/layout'
 import Head from 'next/head'
 import { useTheme } from 'next-themes'
+import Image from 'next/image'
 export default function Index() {
   const { theme } = useTheme()
   const rightArrowLink = `https://s.svgbox.net/hero-solid.svg?ic=arrow-right&fill=${
@@ -19,22 +20,22 @@ export default function Index() {
         <div className="mt-6 text-lg font-normal text-black lg:mt-16">
           <p>
             I am a <b>Product Designer</b> and <b>Researcher</b> with a knack
-            for building things. Currently finishing up my Master's Thesis with
+            for building things. Currently finishing up my Thesis with
             the HCI Division of Gothenburg University and IIIT Bangalore. I’m
             currently studying at{' '}
             <a
               className="cursor-pointer general-link"
               href="https://www.iiitb.ac.in"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               IIIT Bangalore
             </a>{' '}
-            , India and doing my master's thesis under the supervision of{' '}
+            , India and doing my thesis under the supervision of{' '}
             <a
               className="cursor-pointer general-link"
               href="https://www.gu.se/en/about/find-staff/mattiasrost"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Dr. Mattias Rost
@@ -43,7 +44,7 @@ export default function Index() {
             <a
               className="cursor-pointer general-link"
               href="https://www.gu.se/en/applied-information-technology/division-of-human-computer-interaction#Research"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               HCI Division
@@ -52,7 +53,7 @@ export default function Index() {
             <a
               className="cursor-pointer general-link"
               href="https://www.iiitb.ac.in/faculty/bidisha-chaudhuri"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Dr. Bidisha Chaudhuri
@@ -86,7 +87,7 @@ export default function Index() {
             <button className="flex items-center p-4 mt-4 font-medium text-white transition duration-300 bg-black border-2 border-black cursor-pointer dark:bg-white dark:text-black rounded-xl hover:opacity-80">
               <div className="pr-2">My Resume</div>
               <div>
-                <img
+                <Image
                   src={rightArrowLink}
                   width="20"
                   height="20"

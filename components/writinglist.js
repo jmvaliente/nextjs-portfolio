@@ -1,6 +1,6 @@
 import WritingPreview from './writing-preview'
 
-export default function WritingsList({ posts }) {
+export default function WritingsList ({ posts }) {
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

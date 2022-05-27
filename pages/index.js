@@ -10,7 +10,7 @@ import OtherSection from '@/components/othersection'
 import { getAllPostsForHome, getAllProjectsForHome } from '@/lib/api'
 import { HOME_OG_IMAGE_URL } from '@/lib/constants'
 import Layout from '@/components/layout'
-export default function Index({ allPosts, allWork }) {
+export default function Index ({ allPosts, allWork }) {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
 
@@ -50,15 +50,14 @@ export default function Index({ allPosts, allWork }) {
         {/* <Fade bottom> */}
         <div className="mt-6 mb-12 lg:mt-16">
           <p className="mt-8 text-3xl font-medium text-left text-black md:text-4xl lg:text-6xl dark:text-white">
-            Howdy! I’m Shreyas Gupta.
+            Hi! I’m Jose Miguel Valiente.
           </p>{' '}
           <p className="mt-8 text-xl font-normal text-left text-black md:text-xl lg:text-xl dark:text-white">
-            I am a <b>Product Designer</b> and <b>Researcher</b> with a knack
-            for building things. Currently building a Home for Data Teams at{' '}
-            <span class="dotted-underline">Atlan</span> and finishing up my
-            Master's Thesis with the HCI Division of{' '}
-            <span class="dotted-underline">Gothenburg University</span> and{' '}
-            <span class="dotted-underline">IIIT Bangalore</span>.
+            Soy <b>Web Developer</b> en RedRadix.{' '}
+            Gran aficionado al IoT y a la tecnología blockchain donde tengo proyectos usándolas.{' '}
+            En mi vida profesional he sido autodidacta{' '}
+            <span className="dotted-underline">Gothenburg University</span> and{' '}
+            <span className="dotted-underline">IIIT Bangalore</span>.
           </p>
           <div className="flex mt-2">
             <Link href="/about" passHref={true}>
@@ -70,7 +69,7 @@ export default function Index({ allPosts, allWork }) {
             <Link href="https://twitter.com/wutamelonshrey" passHref={true}>
               <button className="flex items-center p-4 mt-4 text-black transition duration-300 transform border-2 border-black cursor-pointer dark:border-white dark:text-white rounded-xl hover:opacity-70">
                 <div className="pr-2">
-                  <img
+                  <Image
                     src={twitterSvgTagLink}
                     width="22"
                     height="22"
@@ -84,7 +83,7 @@ export default function Index({ allPosts, allWork }) {
         </div>
         <div className="mt-24 md:mt-36 lg:mt-48">
           <div className="home-page-title">Selected Work</div>
-          <div>
+          {/* <div>
             <a
               target="_blank"
               href="https://glado8.notion.site/Designing-a-Marketplace-for-Notion-8ba5abea314e4620800d282762fcb024"
@@ -111,7 +110,7 @@ export default function Index({ allPosts, allWork }) {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
           <ProjectList posts={allWork} />
         </div>
 
@@ -148,7 +147,7 @@ export default function Index({ allPosts, allWork }) {
             </button>
           </Link>
         </div>
-        <div className="mt-12 lg:mt-24">
+        {/* <div className="mt-12 lg:mt-24">
           <div className="home-page-title">Playground</div>
           <Link href="/playground" passHref={true}>
             <div>
@@ -170,16 +169,16 @@ export default function Index({ allPosts, allWork }) {
               </div>
             </div>
           </Link>
-        </div>
+        </div> */}
       </Layout>
     </>
   )
 }
 
-export async function getStaticProps({ preview }) {
+export async function getStaticProps ({ preview }) {
   const allPosts = await getAllPostsForHome(preview)
   const allWork = await getAllProjectsForHome(preview)
   return {
-    props: { allPosts, allWork },
+    props: { allPosts, allWork }
   }
 }

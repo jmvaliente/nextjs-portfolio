@@ -1,5 +1,6 @@
 import Date from './date'
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import CoverImage from './cover-image'
 import ReadingTime from './read-time'
 import { useTheme } from 'next-themes'
@@ -28,7 +29,7 @@ export default function PostHeader({
           <div className="flex flex-row mr-4 text-sm font-normal text-black sm:text-base dark:text-white">
             <Date dateString={date} />
             <div className="mx-4 mt-2">
-              <img src={timeLink} width="6" height="6" aria-hidden="true" />
+              <Image src={timeLink} width="6" height="6" aria-hidden="true" alt="Logo" />
             </div>
             <div className="mb-2 text-sm font-normal text-black sm:text-base dark:text-white">
               <ReadingTime content={content} />

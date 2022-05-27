@@ -13,7 +13,7 @@ export default function Footer() {
           theme === 'dark' ? 'link-styling-dark' : 'link-styling'
         }`}
         href={link}
-        rel="noopener"
+        rel="noopener noreferrer"
         target="_blank"
       >
         {linkText}

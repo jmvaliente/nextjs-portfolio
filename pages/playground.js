@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Layout from '@/components/layout'
 import Head from 'next/head'
-export default function Index() {
+export default function Index () {
   return (
     <>
       <Layout>
@@ -30,11 +30,7 @@ export default function Index() {
               />
             </div>
             <p className="page-para-design">
-              2 years back when Neumorphism was trending, I tried my hand out on
-              learning the style by reimagining Instagram in Neumorphic style.
-              I'll say it came out pretty well! It's amazing how much difference
-              just two sets of shadows can bring in. I have glassmorphism,
-              brutalism and minimalism next!
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
             </p>
           </div>
 
@@ -75,9 +71,7 @@ export default function Index() {
               />
             </div>
             <p className="page-para-design">
-              I've been meaning to learn Blender for quite some time and I
-              finally got around to making something. It's just a start, lot of
-              ideas to explore!
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
             </p>
           </div>
 
